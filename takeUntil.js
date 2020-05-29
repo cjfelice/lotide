@@ -21,9 +21,9 @@ const assertArraysEqual = function(firstArr, secondArr) {
 
 const takeUntil = (array, callback) => {
   const newArr = [];
-  for (const item of array) {
-    if (item != array.filter(callback)) {
-      newArr.push(item);
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] !== array.filter(callback)[0]) {
+      newArr.push(array[i]);
     } else {
       return newArr;
     }
@@ -35,5 +35,5 @@ const takeUntil = (array, callback) => {
 const data1 = [1, 2, 5, '7', 2, -1, 2, 4, 5];
 const data2 = ["I've", "been", "to", "Hollywood", ",", "I've", "been", "to", "Redwood"];
 
-assertArraysEqual(takeUntil(data1, x => x < 0), [ 1, 2, 5, 7, 2 ]);
+assertArraysEqual(takeUntil(data1, x => x < 0), [ 1, 2, 5, '7', 2 ]);
 assertArraysEqual(takeUntil(data2, x => x === ','), [ 'I\'ve', 'been', 'to', 'Hollywood' ]);

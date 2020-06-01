@@ -1,0 +1,28 @@
+{
+  "name": "lotide",
+  "version": "1.0.0",
+  "description": "Lotide Library - for Lighthouse",
+  "main": "assertArraysEqual.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cjfelice/lotide.git"
+  },
+  "keywords": [
+    "lotide",
+    "cjfelice",
+    "lighthouse",
+    "way-better-than-lodash"
+  ],
+  "author": "cjfelice",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cjfelice/lotide/issues"
+  },
+  "homepage": "https://github.com/cjfelice/lotide#readme"
+}

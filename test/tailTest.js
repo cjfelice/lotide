@@ -1,14 +1,23 @@
+const assert  = require('chai').assert;
 const assertEqual = require('../assertEqual');
 const tail = require('../tail');
 
-const result = tail(["Hello", "Lighthouse", "Labs"]);
-assertEqual(result.length, 2);
-assertEqual(result[0], "Lighthouse");
-assertEqual(result[1], "Labs");
+describe('#tail', () => {
 
-const words = ["Yo Yo", "Lighthouse", "Labs"];
-tail(words);
-assertEqual(words.length, 3);
+  it('returns 2 for array length of ["Hello", "Lighthouse", "Labs"]', () => {
+    assert.strictEqual(tail(["Hello", "Lighthouse", "Labs"]).length, 2);
+  });
 
-const smallResult = tail(['shrimp']);
-assertEqual(smallResult.length, 0);
+  it('returns "Lighthouse" for arr[0] of ["Hello", "Lighthouse", "Labs"]', () => {
+    assert.strictEqual(tail(["Hello", "Lighthouse", "Labs"])[0], "Lighthouse");
+  });
+
+  it('returns ["Lighthouse", "Labs"] for ["Hello", "Lighthouse", "Labs"]', () => {
+    assert.deepEqual(tail(["Hello", "Lighthouse", "Labs"]), ["Lighthouse", "Labs"]);
+  });
+
+  it('returns [] for ["shrimp"]', () => {
+    assert.deepEqual(tail(["shrimp"]), []);
+  });
+
+});

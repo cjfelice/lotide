@@ -1,23 +1,3 @@
-const eqArrays = function(firstArr, secondArr) {
-  let arrayTest = true;
-  if (firstArr.length !== secondArr.length) {
-    arrayTest = false;
-  }
-  for (let i = 0; i < firstArr.length; i++) {
-    if (firstArr[i] !== secondArr[i]) {
-      arrayTest = false;
-    }
-  }
-  return arrayTest;
-};
-
-const assertArraysEqual = function(firstArr, secondArr) {
-  if (eqArrays(firstArr, secondArr) === true) {
-    console.log(`✅ Assertion Passed: ${firstArr} === ${secondArr}`);
-  } else {
-    console.log(`❌ Assertion Failed: ${firstArr} !== ${secondArr}`);
-  }
-};
 
 const letterPositions = function(sentence) {
   const results = {};
@@ -33,4 +13,4 @@ const letterPositions = function(sentence) {
   return results;
 };
 
-assertArraysEqual(letterPositions("lighthouse in the house")['h'], [3, 5, 15, 18]);
+module.exports = letterPositions;

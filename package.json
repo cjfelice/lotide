@@ -1,6 +1,6 @@
 {
   "name": "@cjfelice/lotide",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Lotide Library - for Lighthouse",
   "main": "index.js",
   "directories": {

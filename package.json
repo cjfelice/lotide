@@ -1,5 +1,5 @@
 {
-  "name": "lotide",
+  "name": "@cjfelice/lotide",
   "version": "1.0.0",
   "description": "Lotide Library - for Lighthouse",
   "main": "index.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cjfelice/lotide.git"
+  "url": "git+https://github.com/cjfelice/lotide.git"
   },
   "keywords": [
     "lotide",
@@ -19,7 +19,7 @@
     "lighthouse",
     "way-better-than-lodash"
   ],
-  "author": "cjfelice",
+  "author": "Christopher Smith",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/cjfelice/lotide/issues"

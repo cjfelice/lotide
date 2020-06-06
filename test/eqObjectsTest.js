@@ -11,4 +11,13 @@ describe('#eqObjects', () => {
   it('returns undefined for undefined', () => {
     assert.strictEqual(eqObjects([], ''), true);
   });
+  it('returns true when comparing equal nested objects', () => {
+    assert.strictEqual(eqObjects({ a: { z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }), true);
+  });
+  it('returns false when comparing differently nested objects', () => {
+    assert.strictEqual(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: { z: 1 }, b: 2 }), false);
+  });
+  it('returns false when comparing nested and un-nested objects', () => {
+    assert.strictEqual(eqObjects({ a: { y: 0, z: 1 }, b: 2 }, { a: 1, b: 2 }), false);
+  });
 });

@@ -5,7 +5,11 @@ const eqArrays = function(firstArr, secondArr) {
     arrayTest = false;
   }
   for (let i = 0; i < firstArr.length; i++) {
-    if (firstArr[i] !== secondArr[i]) {
+    if (Array.isArray(firstArr[i]) && Array.isArray(secondArr[i])) {
+      if(!eqArrays(firstArr[i], secondArr[i])) {
+        arrayTest = false;
+      }
+    } else if (firstArr[i] !== secondArr[i]) {
       arrayTest = false;
     }
   }

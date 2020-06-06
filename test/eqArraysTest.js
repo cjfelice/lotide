@@ -12,4 +12,16 @@ describe('#eqArrays', () => {
     assert.strictEqual(eqArrays([1, '2', 3], [1, 2, 3]), false);
   });
 
+  it('returns true if given two nested arrays that are identical', () => {
+    assert.strictEqual(eqArrays([[2, 3], [4]], [[2, 3], [4]]), true);
+  });
+
+  it('returns false if given two nested arrays that are not identical', () => {
+    assert.strictEqual(eqArrays([[2, 3], [4]], [[2, 3], [4, 5]]), false);
+  });
+
+  it('returns false if given two differently nested arrays that look the same but are not identical', () => {
+    assert.strictEqual(eqArrays([[2, 3], [4]], [[2, 3], 4]), false);
+  });
+
 });
